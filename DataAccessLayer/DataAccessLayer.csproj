@@ -51,7 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\ICategoryDal.cs" />
     <Compile Include="Abstract\ICategoryDal2.cs" />
     <Compile Include="Abstract\IRepesitory.cs" />
     <Compile Include="Concrete\Context.cs" />

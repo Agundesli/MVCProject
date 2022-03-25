@@ -1,7 +1,7 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
     <table class="table table-hover">
         <tr>
             <td>Kategori Id</td>
@@ -16,7 +16,7 @@
             <td>Yazılım Açıklaması</td>
             <td>True</td>
             <td>
-                <button class="btn btn-warning">Güncelle
+                <button  class="btn btn-warning">Güncelle
                 </button>
             </td>
         </tr>
@@ -44,12 +44,15 @@
         </tr>
     </table>
 <br />
-<button class="btn btn-danger">
+<a href="/Category/GetCategoryList" class="btn btn-success">Listele</a>
+<a href="/Category/AddCategory" class="btn btn-info">Ekle</a>
+
+@*<button class="btn btn-danger">
     Kategori Listesi 
-</button>
-<button class="btn btn-success">
+</button>*@
+@*<button class="btn btn-success">
     Kategori Ekle
-</button>
+</button>*@
 <button class="btn btn-info">
     Kategori Sil
 </button>

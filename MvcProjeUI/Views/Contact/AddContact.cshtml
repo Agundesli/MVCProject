@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "AddContact";
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<h2>İletişim Ekleme Sayfası</h2>
+<form class="form-group" method="post">
+    <input type="text" placeholder="Kullanıcı Adı" name="UseName" />
+    <input type="text" placeholder="Kullanıcı Mail" name="UserMail" />
+    <input type="text" placeholder="Konu" name="Subject" />
+    <input type="text" placeholder="Mesaj" name="Message" />
+    <button class="btn btn-info">
+        Ekle
+    </button>
+    <a href="/Home/Index" class="btn btn-info">Ana Sayfa</a>
+</form>

@@ -8,31 +8,31 @@ using System.Web.Mvc;
 
 namespace MvcProjeUI.Controllers
 {
-    public class CategoryController : Controller
+    public class WriterController : Controller
     {
-        // GET: Category
+        // GET: Writer
         public ActionResult Index()
         {
             return View();
         }
-        CategoryManager categoryManager = new CategoryManager();
-        public ActionResult GetCategoryList()
+        WritterManager writterManager = new WritterManager();
+        public ActionResult GetWriterList()
         {
-            var categoryvalues = categoryManager.GetAll();
+            var writervalues = writterManager.GetAll();
 
-            return View(categoryvalues);
+            return View(writervalues);
         }
         [HttpGet]// sayfa ilk yüklendiğinde alttaki metod çalışacak
-        public ActionResult AddCategory()
+        public ActionResult AddWriter()
         {
             return View();
         }
 
         [HttpPost]// butona tıklandıgında alttaki metod çalışacak
-        public ActionResult AddCategory(Category category)
+        public ActionResult AddWriter(Writer writer)
         {
-            categoryManager.CategoryAddBL(category);
-            return RedirectToAction("GetCategoryList");
+            writterManager.WriterAddBL(writer);
+            return RedirectToAction("GetWriterList");
         }
     }
 }

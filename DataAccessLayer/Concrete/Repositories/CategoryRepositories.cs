@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Concrete.Repositories
 {
-    public class CategoryRepositories : ICategoryDal
+    public class CategoryRepositories
     {
         Context context = new Context();
         DbSet<Category> _object;

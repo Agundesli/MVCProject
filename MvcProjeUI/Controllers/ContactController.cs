@@ -8,31 +8,31 @@ using System.Web.Mvc;
 
 namespace MvcProjeUI.Controllers
 {
-    public class CategoryController : Controller
+    public class ContactController : Controller
     {
-        // GET: Category
+        // GET: Contact
         public ActionResult Index()
         {
             return View();
         }
-        CategoryManager categoryManager = new CategoryManager();
-        public ActionResult GetCategoryList()
+        ContactManager contactManager = new ContactManager();
+        public ActionResult GetContactList()
         {
-            var categoryvalues = categoryManager.GetAll();
+            var contactvalues = contactManager.GetAll();
 
-            return View(categoryvalues);
+            return View(contactvalues);
         }
         [HttpGet]// sayfa ilk yüklendiğinde alttaki metod çalışacak
-        public ActionResult AddCategory()
+        public ActionResult AddContact()
         {
             return View();
         }
 
         [HttpPost]// butona tıklandıgında alttaki metod çalışacak
-        public ActionResult AddCategory(Category category)
+        public ActionResult AddContact(Contact contact)
         {
-            categoryManager.CategoryAddBL(category);
-            return RedirectToAction("GetCategoryList");
+            contactManager.ContactAddBL(contact);
+            return RedirectToAction("GetContactList");
         }
     }
 }

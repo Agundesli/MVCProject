@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "AddCategory";
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<h2>Kategori Ekleme Sayfası</h2>
+<form class="form-group" method="post">
+    <input type="text" placeholder="Kategori Adi" name="CategoryName" />
+    <input type="text" placeholder="Kategori Açıklaması" name="CategoryDescription"  />
+    <input type="text" placeholder="Kategori Statüsü" name="CategoryStatus"  />
+    <button class="btn btn-info">
+        Ekle
+    </button>
+    <a href="/Home/Index" class="btn btn-info">Ana Sayfa</a>
+</form>
+
