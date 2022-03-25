@@ -299,6 +299,7 @@
     <Content Include="AdminLTE-3.0.4\index.html" />
     <Content Include="AdminLTE-3.0.4\index2.html" />
     <Content Include="AdminLTE-3.0.4\index3.html" />
+    <Content Include="AdminLTE-3.0.4\indir.jfif" />
     <Content Include="AdminLTE-3.0.4\pages\calendar.html" />
     <Content Include="AdminLTE-3.0.4\pages\charts\chartjs.html" />
     <Content Include="AdminLTE-3.0.4\pages\charts\flot.html" />
@@ -1972,6 +1973,7 @@
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.css" />
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.min.css" />
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.min.js" />
+    <Content Include="AdminLTE-3.0.4\resim.jpg" />
     <Content Include="AdminLTE-3.0.4\starter.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -2275,8 +2277,8 @@
     <Content Include="Views\Contact\GetContactList.cshtml" />
     <Content Include="Views\Contact\AddContact.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
-    <Content Include="Views\AdminCategoryController\index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\AdminCategory\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
