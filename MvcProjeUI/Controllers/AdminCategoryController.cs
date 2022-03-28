@@ -50,7 +50,12 @@ namespace MvcProjeUI.Controllers
                 }
             }
             return View();
-
+        }
+        public ActionResult DeleteCategory(int Id)
+        {
+            var categoryvalues = categoryManager.GetById(Id);
+            categoryManager.CategoryDelete(categoryvalues);
+            return RedirectToAction("GetCategoryList");
         }
     }
 }
