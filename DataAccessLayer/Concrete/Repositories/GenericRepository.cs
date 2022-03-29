@@ -30,8 +30,11 @@ namespace DataAccessLayer.Concrete.Repositories
 
         public void Insert(T p)
         {
-            _object.Add(p);
+            var addedEntity = context.Entry(p);
+            addedEntity.State = EntityState.Added;
             context.SaveChanges();
+            //_object.Add(p);
+            //context.SaveChanges();
         }
 
         public List<T> List()
@@ -46,6 +49,8 @@ namespace DataAccessLayer.Concrete.Repositories
 
         public void Update(T p)
         {
+            var editedEntity = context.Entry(p);
+            editedEntity.State = EntityState.Modified;
             context.SaveChanges();
         }
     }

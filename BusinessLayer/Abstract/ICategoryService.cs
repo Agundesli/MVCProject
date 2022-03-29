@@ -14,6 +14,7 @@ namespace BusinessLayer.Abstract
 
         Category GetById(int Id);//Dışarıdan Id değişkenini alacağız
         void CategoryDelete(Category category);
+        void CategoryUpdate(Category category);
     }
 
 }

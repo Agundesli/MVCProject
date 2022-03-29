@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -11,28 +12,32 @@ namespace MvcProjeUI.Controllers
     public class WriterController : Controller
     {
         // GET: Writer
+        WritterManager writerManager = new WritterManager(new EFWriterDal());
         public ActionResult Index()
         {
-            return View();
-        }
-        WritterManager writterManager = new WritterManager();
-        public ActionResult GetWriterList()
-        {
-            var writervalues = writterManager.GetAll();
-
+            var writervalues = writerManager.GetList();
             return View(writervalues);
         }
-        [HttpGet]// sayfa ilk yüklendiğinde alttaki metod çalışacak
-        public ActionResult AddWriter()
-        {
-            return View();
-        }
 
-        [HttpPost]// butona tıklandıgında alttaki metod çalışacak
-        public ActionResult AddWriter(Writer writer)
-        {
-            writterManager.WriterAddBL(writer);
-            return RedirectToAction("GetWriterList");
-        }
+
+        //WritterManager writterManager = new WritterManager();
+        //public ActionResult GetWriterList()
+        //{
+        //    var writervalues = writterManager.GetAll();
+
+        //    return View(writervalues);
+        //}
+        //[HttpGet]// sayfa ilk yüklendiğinde alttaki metod çalışacak
+        //public ActionResult AddWriter()
+        //{
+        //    return View();
+        //}
+
+        //[HttpPost]// butona tıklandıgında alttaki metod çalışacak
+        //public ActionResult AddWriter(Writer writer)
+        //{
+        //    writterManager.WriterAddBL(writer);
+        //    return RedirectToAction("GetWriterList");
+        //}
     }
 }

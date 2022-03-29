@@ -28,6 +28,12 @@ namespace BusinessLayer.Concrete
         {
             _categoryDal.Delete(category);
         }
+
+        public void CategoryUpdate(Category category)
+        {
+            _categoryDal.Update(category);
+        }
+
         //Id ye karşılık geleni siler
         public Category GetById(int Id)
         {
